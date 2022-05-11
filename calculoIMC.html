@@ -22,6 +22,21 @@
             return peso / (altura * altura);
         }
 
+        function feedbackImc(imc){
+            if(imc <= 18.5){
+                mostra("O seu nivel está muito a baixo da média!")
+            }
+
+            if(imc >= 35){
+                mostra("O seu nivel está muito acima da média!")
+            }
+
+            if(imc > 18.5 && imc < 35){
+                mostra("O seu nivel está dentro da média!")
+            }
+        }
+
+
         var altura = prompt("informe a sua altura: ");
 
         var peso = prompt("informe o seu peso: ")
@@ -29,6 +44,8 @@
         var imc = calculaImc(altura, peso);
 
         mostra("O valor do imc é de: " + imc);
+
+        feedbackImc(imc);
         
     </script>
 </BODY>
